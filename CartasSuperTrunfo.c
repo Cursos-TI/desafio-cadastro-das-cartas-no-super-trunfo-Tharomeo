@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 int main(){
-    //Começar cadastrando as variaveis para a carta 1 e 2
     int populacaoCarta1, pontoTuristicoCarta1, populacaoCarta2, pontoTuristicoCarta2;
-    float areaCidadeCarta1, pibCarta1, areaCidadeCarta2, pibCarta2;
+    float areaCidadeCarta1, pibCarta1, areaCidadeCarta2, pibCarta2, densidadePopulacionalCarta1, densidadePopulacionalCarta2, pibCapitaCarta1, pibCapitaCarta2;
     char codigoEstadoCarta1[2], codigoCarta1[4], nomeCidadeCarta1[50], codigoEstadoCarta2[2], codigoCarta2[4], nomeCidadeCarta2[50];
 
     printf("Vamos cadastrar a sua primeira carta do Super Trunfo: \n"); //Introdução / Cadastro 1 Carta
@@ -29,8 +28,13 @@ int main(){
     printf("digite a quantidade de pontos turisticos que esta cidade possui: \n"); //Pegar quantidade de pontos turisticos que tem na cidade
     scanf("%d", &pontoTuristicoCarta1);
 
-    printf("\nSua Primeira carta fica:\n Estado: %s\n Codigo: %s\n Nome da Cidade: %s\n População:%d \n Area: %f\n PIB: %f\n Pontos Turisticos: %d", codigoEstadoCarta1, codigoCarta1, nomeCidadeCarta1, populacaoCarta1, areaCidadeCarta1, pibCarta1, pontoTuristicoCarta1);
-    //Print das informações da carta 1
+    densidadePopulacionalCarta1 = populacaoCarta1 / areaCidadeCarta1; //Calculo densidade populacional
+
+    pibCapitaCarta1 = pibCarta1 / populacaoCarta1; //Calculo PIB per capita
+
+    printf("\nSua Primeira carta fica:\n Estado: %s\n Codigo: %s\n Nome da Cidade: %s\n População:%d \n Area: %f\n PIB: %f\n Pontos Turisticos: %d\n Densidade populacional: %f\n PIB per Capita: %f", codigoEstadoCarta1, codigoCarta1, nomeCidadeCarta1, populacaoCarta1, areaCidadeCarta1, pibCarta1, pontoTuristicoCarta1, densidadePopulacionalCarta1, pibCapitaCarta1);
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     printf("\nVamos cadastrar a sua segunda carta do Super Trunfo: \n"); //Cadastro 2 carta
 
@@ -55,7 +59,11 @@ int main(){
     printf("digite a quantidade de pontos turisticos que esta cidade possui: \n"); //Pegar quantidade de pontos turisticos que tem na cidade
     scanf("%d", &pontoTuristicoCarta2);
 
-    printf("\nSua Segunda carta fica:\n Estado: %s\n Codigo: %s\n Nome da Cidade: %s\n Populacao:%d \n Area: %f\n PIB: %f\n Pontos Turisticos: %d", codigoEstadoCarta2, codigoCarta2, nomeCidadeCarta2, populacaoCarta2, areaCidadeCarta2, pibCarta2, pontoTuristicoCarta2);
-    //Print das informações da carta 2
+    densidadePopulacionalCarta2 = populacaoCarta2 / areaCidadeCarta2; // Calculo densidade populacional
+
+    pibCapitaCarta2 = pibCarta2 / populacaoCarta2; // Calculo PIB per capita
+
+    printf("\nSua Primeira carta fica:\n Estado: %s\n Codigo: %s\n Nome da Cidade: %s\n População:%d \n Area: %f\n PIB: %f\n Pontos Turisticos: %d\n Densidade populacional: %f\n PIB per Capita: %f", codigoEstadoCarta2, codigoCarta2, nomeCidadeCarta2, populacaoCarta2, areaCidadeCarta2, pibCarta2, pontoTuristicoCarta2, densidadePopulacionalCarta2, pibCapitaCarta2);
+
     return 0;
 }
